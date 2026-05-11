@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body, html {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ── Layout split ─────────────────────────────────────────── */
+.login-page {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    min-height: 560px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.35);
+    margin: 20px;
+}
+
+/* ── Left panel (dark sidebar) ────────────────────────────── */
+.login-split-left {
+    background: linear-gradient(180deg, #1a1f36 0%, #2d3561 100%);
+    width: 340px;
+    flex-shrink: 0;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-split-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='30' cy='30' r='2' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/g%3E%3C/svg%3E") repeat;
+    z-index: 0;
+}
+
+.login-brand, .login-teachers, .login-left-tagline { position: relative; z-index: 1; }
+
+.login-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+.login-brand-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+.login-brand-name {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.03em;
+}
+
+.login-teachers {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+}
+
+.login-teacher-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 14px 16px;
+    transition: background 0.2s ease;
+}
+.login-teacher-card:hover {
+    background: rgba(255,255,255,0.12);
+}
+.login-teacher-card img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+.login-teacher-card div {
+    display: flex;
+    flex-direction: column;
+}
+.login-teacher-card strong {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+.login-teacher-card span {
+    color: rgba(255,255,255,0.55);
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.login-left-tagline {
+    color: rgba(255,255,255,0.45);
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 24px;
+}
+
+/* ── Right panel (form) ───────────────────────────────────── */
+.login-split-right {
+    flex: 1;
+    background: rgba(255,255,255,0.97);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 48px;
+}
+
+.login-panel {
+    width: 100%;
+    max-width: 360px;
+}
+
+.login-panel-header {
+    margin-bottom: 36px;
+}
+
+.login-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+.login-subtitle {
+    font-size: 15px;
+    color: #64748b;
+    font-weight: 400;
+}
+
+/* ── Inputs ───────────────────────────────────────────────── */
+.input-group {
+    position: relative;
+    margin-bottom: 28px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #e2e8f0;
+    padding: 14px 0 10px;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #667eea;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    font-size: 15px;
+    color: #94a3b8;
+    pointer-events: none;
+    transition: all 0.25s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -4px;
+    font-size: 12px;
+    color: #667eea;
+    font-weight: 500;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: width 0.3s ease;
+}
+
+input:focus ~ .underline { width: 100%; }
+
+/* ── Button ───────────────────────────────────────────────── */
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102,126,234,0.4);
+    letter-spacing: 0.02em;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(102,126,234,0.5);
+}
+
+.btn-login:active { transform: scale(0.98); }
+
+/* ── Messages ─────────────────────────────────────────────── */
+.error-message {
+    color: #ef4444;
+    font-size: 13px;
+    margin-top: -18px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.success-message {
+    color: #10b981;
+    font-size: 14px;
+    margin-top: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 640px) {
+    .login-split-left { display: none; }
+    .login-page { border-radius: 16px; }
+    .login-split-right { padding: 32px 28px; }
+    .login-title { font-size: 24px; }
+}

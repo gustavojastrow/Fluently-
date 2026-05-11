@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\Jaast\\\\OneDrive\\\\Área de Trabalho\\\\EnglishTeacher\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(dotnet restore *)",
+      "Bash(dotnet build *)",
+      "Bash(Select-String -Pattern \"error|Error\")",
+      "Bash(Select-String -NotMatch \"warning|Warning|NU1\")"
+    ]
+  }
+}

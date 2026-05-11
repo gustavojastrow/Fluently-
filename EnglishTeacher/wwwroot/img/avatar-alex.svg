@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#43cea2"/>
+      <stop offset="100%" stop-color="#185a9d"/>
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="40" fill="url(#bg)"/>
+  <!-- Body -->
+  <ellipse cx="40" cy="72" rx="22" ry="14" fill="white" opacity="0.2"/>
+  <!-- Head -->
+  <circle cx="40" cy="33" r="17" fill="#ffe0c8"/>
+  <!-- Hair (short) -->
+  <path d="M24 27 Q24 14 40 14 Q56 14 56 27 Q52 19 40 19 Q28 19 24 27Z" fill="#2c1a0e"/>
+  <!-- Eyes -->
+  <circle cx="33" cy="33" r="3" fill="#1a3a5c"/>
+  <circle cx="47" cy="33" r="3" fill="#1a3a5c"/>
+  <circle cx="34" cy="32" r="1" fill="white"/>
+  <circle cx="48" cy="32" r="1" fill="white"/>
+  <!-- Eyebrows -->
+  <path d="M30 27 Q33 25 36 27" stroke="#2c1a0e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M44 27 Q47 25 50 27" stroke="#2c1a0e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Smile -->
+  <path d="M34 40 Q40 44 46 40" stroke="#185a9d" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Lightning bolt decoration -->
+  <path d="M64 8 L60 18 L64 18 L58 30 L63 30 L56 44 L61 44 L55 56" stroke="#ffd700" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  <!-- Dots -->
+  <circle cx="10" cy="14" r="2" fill="white" opacity="0.5"/>
+  <circle cx="16" cy="22" r="1.5" fill="white" opacity="0.4"/>
+</svg>

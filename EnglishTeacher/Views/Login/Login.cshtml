@@ -1,0 +1,75 @@
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Entrar";
+}
+<link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+
+<div class="login-page">
+    <div class="login-split-left">
+        <div class="login-brand">
+            <img src="~/img/favicon-fluently.svg" class="login-brand-icon" alt="Fluently" />
+            <span class="login-brand-name">Fluently</span>
+        </div>
+        <div class="login-teachers">
+            <div class="login-teacher-card">
+                <img src="~/img/avatar-luna.svg" alt="Luna" />
+                <div>
+                    <strong>Luna</strong>
+                    <span>Nível Básico</span>
+                </div>
+            </div>
+            <div class="login-teacher-card">
+                <img src="~/img/avatar-alex.svg" alt="Alex" />
+                <div>
+                    <strong>Alex</strong>
+                    <span>Nível Intermediário</span>
+                </div>
+            </div>
+            <div class="login-teacher-card">
+                <img src="~/img/avatar-jordan.svg" alt="Jordan" />
+                <div>
+                    <strong>Jordan</strong>
+                    <span>Nível Avançado</span>
+                </div>
+            </div>
+        </div>
+        <p class="login-left-tagline">Aprenda inglês com professores de IA personalizados para o seu nível.</p>
+    </div>
+
+    <div class="login-split-right">
+        <div class="login-panel">
+            <div class="login-panel-header">
+                <h1 class="login-title">Bem-vindo de volta</h1>
+                <p class="login-subtitle">Entre para continuar aprendendo</p>
+            </div>
+
+            <form id="loginForm" data-authenticate-url="@Url.Action("Authenticate", "Login")" autocomplete="off" spellcheck="false">
+                <div class="input-group">
+                    <input type="text" id="login" name="login" placeholder=" " required autocomplete="username" />
+                    <label for="login">Usuário</label>
+                    <span class="underline"></span>
+                </div>
+                <div id="loginError" class="error-message" style="display: none;">Usuário é obrigatório.</div>
+
+                <div class="input-group">
+                    <input type="password" id="senha" name="senha" placeholder=" " required autocomplete="current-password" />
+                    <label for="senha">Senha</label>
+                    <span class="underline"></span>
+                </div>
+                <div id="senhaError" class="error-message" style="display: none;">Senha é obrigatória.</div>
+
+                <div id="serverError" class="error-message" style="display:none;">Usuário ou senha incorretos.</div>
+
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+
+            <div id="successMessage" class="success-message" style="display:none;">✓ Login realizado! Redirecionando...</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const loginUrl = '@Url.Action("Login", "Login")';
+    const assistenteUrl = '@Url.Action("Teacher", "Teacher")';
+</script>
+<script src="~/js/login.js"></script>

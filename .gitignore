@@ -1,0 +1,106 @@
+# General
+.DS_Store
+.env
+.vscode/
+
+# Build artifacts
+bin/
+obj/
+
+# Rider
+.idea/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+.nuget/
+*.nupkg
+*.snupkg
+*.lok
+
+# Azure App Service Files
+.deployment
+deployment.cmd
+*.deps.json
+*.runtimeconfig.json
+
+# misc
+*.log
+*.fsproj.user
+*.db
+*.pubxml
+*.pfx
+appsettings*.json
+
+# Ignore Visual Studio files
+.vs/
+*.suo
+*.user
+*.userprefs
+*.VC.db
+*.opendb
+
+# Ignore build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+*.tmp
+*.log
+
+# Ignore packages
+packages/
+node_modules/
+bower_components/
+
+# Ignore test results
+TestResults/
+*.trx
+*.coverage
+
+# Ignore deployment files
+*.pubxml
+*.pfx
+
+# Ignore solution-specific files
+*.sln.docstates
+*.vssscc
+*.vspscc
+*.vsscc
+*.bak
+
+# Ignore rider files
+.idea/
+
+# Ignore appsettings.json (sensitive data)
+appsettings.json
+appsettings.*.json
+
+# Ignore user secrets
+.microsoft/usersecrets/
+
+# Ignore local database files
+*.mdf
+*.ldf
+
+# Ignore resharper files
+*.DotSettings
+*.user
+
+# Thumbs.db
+Thumbs.db
+
+# VS Code files
+.vscode/
+
+# Environment variables
+.env
+

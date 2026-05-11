@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#4a00e0"/>
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="40" fill="url(#bg)"/>
+  <!-- Body -->
+  <ellipse cx="40" cy="72" rx="22" ry="14" fill="white" opacity="0.15"/>
+  <!-- Head -->
+  <circle cx="40" cy="33" r="17" fill="#f5cba7"/>
+  <!-- Hair -->
+  <path d="M23 28 Q23 13 40 13 Q57 13 57 28 Q54 18 40 18 Q26 18 23 28Z" fill="#1c1c1c"/>
+  <!-- Glasses frame left -->
+  <rect x="27" y="28" width="11" height="8" rx="4" fill="none" stroke="#c0a000" stroke-width="1.8"/>
+  <!-- Glasses frame right -->
+  <rect x="42" y="28" width="11" height="8" rx="4" fill="none" stroke="#c0a000" stroke-width="1.8"/>
+  <!-- Glasses bridge -->
+  <path d="M38 32 Q40 31 42 32" stroke="#c0a000" stroke-width="1.5" fill="none"/>
+  <!-- Eyes behind glasses -->
+  <circle cx="32.5" cy="32" r="2.2" fill="#1c1c1c"/>
+  <circle cx="47.5" cy="32" r="2.2" fill="#1c1c1c"/>
+  <circle cx="33.2" cy="31.3" r="0.8" fill="white"/>
+  <circle cx="48.2" cy="31.3" r="0.8" fill="white"/>
+  <!-- Confident slight smile -->
+  <path d="M35 40 Q40 43 45 40" stroke="#8e44ad" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Target decoration -->
+  <circle cx="67" cy="13" r="8" fill="none" stroke="#ffd700" stroke-width="2" opacity="0.8"/>
+  <circle cx="67" cy="13" r="4.5" fill="none" stroke="#ffd700" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="67" cy="13" r="1.5" fill="#ffd700" opacity="0.9"/>
+  <!-- Sparkles -->
+  <circle cx="10" cy="60" r="2" fill="white" opacity="0.4"/>
+  <circle cx="15" cy="68" r="1.5" fill="white" opacity="0.3"/>
+</svg>
